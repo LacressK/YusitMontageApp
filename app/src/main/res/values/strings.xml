@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">YusitMontage</string>
+    <string name="splashscreen_text">Souvenir de Vacances</string>
+    <string name="menu_title_text">Ah, les vacances… Quel souvenir allez-vous envoyer à vos amis ? Choisissez votre plus beau costume de bain !</string>
+    <string name="menu_indication_text">Touchez la photo de votre choix ou \"le saviez-vous\" pour en savoir plus</string>
+    <string name="mediation1_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget est erat. Quisque pretium nunc vitae suscipit elementum. Proin in.</string>
+    <string name="mediation2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris sem, aliquet in orci et, consectetur luctus odio. Sed faucibus.</string>
+    <string name="mediation3_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia lectus urna, sed gravida nunc.</string>
+    <string name="mediation4_text">Le saviez-vous ? Le costume de bain des années folles était fait en laine. Pas facile de nager avec !</string>
+</resources>

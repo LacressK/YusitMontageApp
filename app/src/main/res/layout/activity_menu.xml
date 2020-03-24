@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".controller.MenuActivity">
+
+    <TextView
+        android:id="@+id/activity_menu_title_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_title_text"
+        android:textColor="@color/colorGrey"
+        android:textSize="37sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_menu_indication_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:text="@string/menu_indication_text"
+        android:textColor="@color/colorGrey"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_menu_title_textView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/activity_menu_insert1_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="15dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/activity_menu_insert3_imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/activity_menu_insert4_imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/photo1_background" />
+
+    <ImageButton
+        android:id="@+id/activity_menu_insert2_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="85dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_menu_insert3_imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/activity_menu_insert4_imageButton"
+        app:srcCompat="@drawable/photo2_background" />
+
+    <ImageButton
+        android:id="@+id/activity_menu_insert3_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="85dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/activity_menu_insert2_imageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_menu_insert1_imageButton"
+        app:srcCompat="@drawable/photo3_background" />
+
+    <ImageButton
+        android:id="@+id/activity_menu_insert4_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="15dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/activity_menu_insert2_imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_menu_insert1_imageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/photo4_background" />
+
+    <ImageButton
+        android:id="@+id/activity_menu_mediation1_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="325dp"
+        android:layout_marginBottom="175dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_menu_insert1_imageButton"
+        app:layout_constraintStart_toStartOf="@+id/activity_menu_insert1_imageButton"
+        app:srcCompat="@drawable/mediation_button"
+        android:background="@null"
+        android:contentDescription="@string/app_name" />
+
+    <ImageButton
+        android:id="@+id/activity_menu_mediation2_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="325dp"
+        android:layout_marginBottom="175dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_menu_insert2_imageButton"
+        app:layout_constraintStart_toStartOf="@+id/activity_menu_insert2_imageButton"
+        app:srcCompat="@drawable/mediation_button"
+        android:background="@null"
+        android:contentDescription="@string/app_name" />
+
+    <ImageButton
+        android:id="@+id/activity_menu_mediation3_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="325dp"
+        android:layout_marginBottom="175dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_menu_insert3_imageButton"
+        app:layout_constraintStart_toStartOf="@+id/activity_menu_insert3_imageButton"
+        app:srcCompat="@drawable/mediation_button"
+        android:background="@null"
+        android:contentDescription="@string/app_name" />
+
+    <ImageButton
+        android:id="@+id/activity_menu_mediation4_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="325dp"
+        android:layout_marginBottom="175dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_menu_insert4_imageButton"
+        app:layout_constraintStart_toStartOf="@+id/activity_menu_insert4_imageButton"
+        app:srcCompat="@drawable/mediation_button"
+        android:background="@null"
+        android:contentDescription="@string/app_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
