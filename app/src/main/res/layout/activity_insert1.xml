@@ -5,23 +5,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".controller.Insert1Activity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/activity_insert1_background_imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/photo1_insert2x" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="85dp"
-        android:layout_height="92dp"
-        app:srcCompat="@drawable/insert_circle"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="32dp"
-        tools:ignore="MissingConstraints" />
-
+    <ImageButton
+        android:id="@+id/activity_insert1_position1_imageButton"
+        android:contentDescription="@string/app_name"
+        android:layout_width="115dp"
+        android:layout_height="110dp"
+        android:scaleType="fitXY"
+        style="@android:style/Widget.Material.Light.Button.Borderless"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_insert1_background_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/activity_insert1_background_imageView"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="@+id/activity_insert1_background_imageView"
+        app:layout_constraintTop_toTopOf="@+id/activity_insert1_background_imageView"
+        app:layout_constraintVertical_bias="0.038"
+        app:srcCompat="@drawable/insert_circle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

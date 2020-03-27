@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="kevin.lacressonniere.yusitmontage">
 
+    <!-- Manifest declarations for accessing camera features and ensure that device does have a camera. -->
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature
-        android:name="android.hardware.camera.any "
+        android:name="android.hardware.camera2.full"
         android:required="true" />
 
+    <!-- Manifest declaration for write permission on the device. -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -19,31 +21,35 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- You don't need to include android:required="false" if your app's minSdkVersion is 28 or higher. -->
+        <uses-library
+            android:name="android.test.runner"
+            android:required="false" />
+
+        <!-- Manifest declarations of AndroidAnnotations generated activities. Lock orientation to landscape. -->
+        <activity android:name=".controller.CameraActivity"></activity>
         <activity
             android:name=".controller.Insert1Activity_"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" />
-
         <activity
             android:name=".controller.Mediation1Activity_"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" />
-
         <activity
             android:name=".controller.MenuActivity_"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" />
-
         <activity
             android:name=".controller.MainActivity_"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
