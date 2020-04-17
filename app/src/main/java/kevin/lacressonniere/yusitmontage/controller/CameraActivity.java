@@ -1,6 +1,7 @@
 package kevin.lacressonniere.yusitmontage.controller;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,5 +18,11 @@ public class CameraActivity extends AppCompatActivity {
                     .replace(R.id.container, CameraFragment.newInstance())
                     .commitNow();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d("CamCam-chan", "CameraActivity is Destroyed");
+        super.onDestroy();
     }
 }

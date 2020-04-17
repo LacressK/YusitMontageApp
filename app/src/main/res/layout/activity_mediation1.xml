@@ -8,9 +8,8 @@
 
     <ImageView
         android:id="@+id/activity_mediation1_imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_width="800dp"
+        android:layout_height="500dp"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toTopOf="@+id/activity_mediation1_textView"
         app:layout_constraintEnd_toEndOf="parent"

@@ -27,7 +27,10 @@
             android:required="false" />
 
         <!-- Manifest declarations of AndroidAnnotations generated activities. Lock orientation to landscape. -->
-        <activity android:name=".controller.CameraActivity"></activity>
+        <activity
+            android:name=".controller.CameraActivity"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".controller.Insert1Activity_"
             android:screenOrientation="landscape"

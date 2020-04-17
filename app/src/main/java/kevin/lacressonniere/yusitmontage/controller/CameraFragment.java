@@ -45,17 +45,20 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
@@ -215,6 +218,11 @@ public class CameraFragment extends Fragment
      * This is the output file for our picture.
      */
     private File mFile;
+
+    /**
+     * String for mFile name base on Date.
+     */
+    private static final String DATE_FORMAT = "dd-MM-yyyy-hh:mm:ss";
 
     /**
      * This a callback object for the {@link ImageReader}. "onImageAvailable" will be called when a
@@ -411,11 +419,19 @@ public class CameraFragment extends Fragment
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
     }
 
+    private static String getCurrentDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+        dateFormat.setTimeZone(TimeZone.getTimeZone("Europe/Paris"));
+        Date today = Calendar.getInstance().getTime();
+        return dateFormat.format(today);
+    }
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         super.onActivityCreated(savedInstanceState);
-        mFile = new File(getActivity().getExternalFilesDir(null), "pic.jpg");
+        mFile = new File(getActivity().getExternalFilesDir(null),
+                getCurrentDate() + ".jpg");
     }
 
     @Override
@@ -440,6 +456,13 @@ public class CameraFragment extends Fragment
         stopBackgroundThread();
         super.onPause();
     }
+
+    @Override
+    public void onDestroy() {
+        Log.d("CamCam-chan", "CameraFragment is Destroyed");
+        super.onDestroy();
+    }
+
 
     private void requestCameraPermission() {
         if (shouldShowRequestPermissionRationale(Manifest.permission.CAMERA)) {
@@ -933,7 +956,6 @@ public class CameraFragment extends Fragment
                 }
             }
         }
-
     }
 
     /**
@@ -947,7 +969,6 @@ public class CameraFragment extends Fragment
             return Long.signum((long) lhs.getWidth() * lhs.getHeight() -
                     (long) rhs.getWidth() * rhs.getHeight());
         }
-
     }
 
     /**
@@ -979,7 +1000,6 @@ public class CameraFragment extends Fragment
                     })
                     .create();
         }
-
     }
 
     /**
